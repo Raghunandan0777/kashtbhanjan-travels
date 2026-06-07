@@ -20,14 +20,14 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@kashatbhanjantravels.com",
-    href: "mailto:info@kashatbhanjantravels.com",
+    value: "renilprajapati94@gmail.com",
+    href: "mailto:renilprajapati94@gmail.com",
   },
   {
     icon: MapPin,
     label: "Office Address",
-    value: "123, Premium Tower, Connaught Place, New Delhi - 110001",
-    href: null,
+    value: "123 Kamrej Char Rasta, Surat 394180",
+    href: "https://maps.google.com/?q=Kamrej+Char+Rasta,+Surat+394180",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function Contact() {
             className="glass rounded-2xl overflow-hidden h-[320px] sm:h-[400px] lg:h-full lg:min-h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.668968353793!2d77.21803181508205!3d28.632162082417064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Kamrej%20Char%20Rasta,%20Surat,%20Gujarat%20394180&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}

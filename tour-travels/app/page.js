@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <> 
       <Navbar />
       <main className="relative z-20">
         <Hero />
