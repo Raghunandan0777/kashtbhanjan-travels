@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { User, Phone, MapPin, Calendar, Car, Navigation } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { User, Phone, MapPin, Calendar, Car, Navigation, CalendarRange } from "lucide-react";
 
 const VEHICLE_OPTIONS = [
   "Sedan",
@@ -13,11 +12,39 @@ const VEHICLE_OPTIONS = [
   "Luxury Car",
 ];
 
+const LOCATION_SUGGESTIONS = [
+  "Surat",
+  "Mumbai",
+  "Ahmedabad",
+  "Vadodara",
+  "Rajkot",
+  "Pune",
+  "Gandhinagar",
+  "Bhavnagar",
+  "Jamnagar",
+  "Junagadh",
+  "Anand",
+  "Vapi",
+  "Valsad",
+  "Bharuch",
+  "Navsari",
+  "Somnath",
+  "Dwarka",
+  "Diu",
+  "Daman",
+  "Mumbai Airport (BOM)",
+  "Surat Airport (STV)",
+  "Ahmedabad Airport (AMD)",
+];
+
 const WHATSAPP_NUMBER = "917990762538";
 
 export default function BookingForm() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  const pickupRef = useRef(null);
+  const destRef = useRef(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -25,14 +52,65 @@ export default function BookingForm() {
     pickup: "",
     destination: "",
     date: "",
+    days: "",
     vehicle: "",
   });
   const [errors, setErrors] = useState({});
+  const [activeField, setActiveField] = useState(null); // 'pickup' | 'destination' | null
+  const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        pickupRef.current && !pickupRef.current.contains(e.target) &&
+        destRef.current && !destRef.current.contains(e.target)
+      ) {
+        setActiveField(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+  };
+
+  const handleLocationChange = (e, field) => {
+    const value = e.target.value;
+    setForm((prev) => ({ ...prev, [field]: value }));
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
+
+    if (value.trim()) {
+      const filtered = LOCATION_SUGGESTIONS.filter((loc) =>
+        loc.toLowerCase().includes(value.toLowerCase())
+      );
+      setSuggestions(filtered);
+      setActiveField(field);
+    } else {
+      const filtered = LOCATION_SUGGESTIONS.slice(0, 5);
+      setSuggestions(filtered);
+      setActiveField(field);
+    }
+  };
+
+  const handleLocationFocus = (field) => {
+    const value = form[field];
+    const filtered = value.trim()
+      ? LOCATION_SUGGESTIONS.filter((loc) =>
+          loc.toLowerCase().includes(value.toLowerCase())
+        )
+      : LOCATION_SUGGESTIONS.slice(0, 5);
+    setSuggestions(filtered);
+    setActiveField(field);
+  };
+
+  const handleSelectSuggestion = (loc, field) => {
+    setForm((prev) => ({ ...prev, [field]: loc }));
+    setActiveField(null);
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
   };
 
   const validate = () => {
@@ -44,6 +122,9 @@ export default function BookingForm() {
     if (!form.pickup.trim()) errs.pickup = "Pickup location is required";
     if (!form.destination.trim()) errs.destination = "Destination is required";
     if (!form.date) errs.date = "Travel date is required";
+    if (!form.days.trim()) errs.days = "Duration is required";
+    else if (isNaN(form.days) || parseInt(form.days) <= 0)
+      errs.days = "Enter a valid number of days";
     if (!form.vehicle) errs.vehicle = "Select a vehicle type";
     return errs;
   };
@@ -56,7 +137,7 @@ export default function BookingForm() {
       return;
     }
 
-    const message = `Hello,
+    const message = `Hello Shree Kashat Bhanjan Travels,
 
 I would like to book a vehicle.
 
@@ -65,6 +146,7 @@ Mobile: ${form.mobile}
 Pickup Location: ${form.pickup}
 Destination: ${form.destination}
 Travel Date: ${form.date}
+Duration: ${form.days} ${parseInt(form.days) === 1 ? "Day" : "Days"}
 Vehicle Type: ${form.vehicle}
 
 Please contact me.`;
@@ -146,38 +228,89 @@ Please contact me.`;
 
             {/* Pickup & Destination */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="relative">
+              {/* Pickup Location */}
+              <div className="relative" ref={pickupRef}>
                 <MapPin
                   size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60 z-10"
                 />
                 <input
                   type="text"
                   name="pickup"
                   placeholder="Pickup Location"
                   value={form.pickup}
-                  onChange={handleChange}
+                  onChange={(e) => handleLocationChange(e, "pickup")}
+                  onFocus={() => handleLocationFocus("pickup")}
                   className={inputClass("pickup")}
+                  autoComplete="off"
                 />
+                <AnimatePresence>
+                  {activeField === "pickup" && suggestions.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-30 divide-y divide-gold-border/10"
+                    >
+                      {suggestions.map((loc) => (
+                        <button
+                          key={loc}
+                          type="button"
+                          onClick={() => handleSelectSuggestion(loc, "pickup")}
+                          className="w-full px-4 py-3 hover:bg-gold/10 text-foreground hover:text-gold text-sm cursor-pointer transition-colors duration-200 text-left flex items-center gap-2 focus:outline-none"
+                        >
+                          <MapPin size={14} className="text-gold/60 flex-shrink-0" />
+                          <span>{loc}</span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 {errors.pickup && (
                   <p className="text-red-400 text-xs mt-1 ml-1">
                     {errors.pickup}
                   </p>
                 )}
               </div>
-              <div className="relative">
+
+              {/* Destination */}
+              <div className="relative" ref={destRef}>
                 <Navigation
                   size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60 z-10"
                 />
                 <input
                   type="text"
                   name="destination"
                   placeholder="Destination"
                   value={form.destination}
-                  onChange={handleChange}
+                  onChange={(e) => handleLocationChange(e, "destination")}
+                  onFocus={() => handleLocationFocus("destination")}
                   className={inputClass("destination")}
+                  autoComplete="off"
                 />
+                <AnimatePresence>
+                  {activeField === "destination" && suggestions.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-30 divide-y divide-gold-border/10"
+                    >
+                      {suggestions.map((loc) => (
+                        <button
+                          key={loc}
+                          type="button"
+                          onClick={() => handleSelectSuggestion(loc, "destination")}
+                          className="w-full px-4 py-3 hover:bg-gold/10 text-foreground hover:text-gold text-sm cursor-pointer transition-colors duration-200 text-left flex items-center gap-2 focus:outline-none"
+                        >
+                          <MapPin size={14} className="text-gold/60 flex-shrink-0" />
+                          <span>{loc}</span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 {errors.destination && (
                   <p className="text-red-400 text-xs mt-1 ml-1">
                     {errors.destination}
@@ -186,8 +319,9 @@ Please contact me.`;
               </div>
             </div>
 
-            {/* Date & Vehicle */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {/* Date, Days & Vehicle */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {/* Date */}
               <div className="relative">
                 <Calendar
                   size={18}
@@ -206,6 +340,30 @@ Please contact me.`;
                   </p>
                 )}
               </div>
+
+              {/* Days */}
+              <div className="relative">
+                <CalendarRange
+                  size={18}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
+                />
+                <input
+                  type="number"
+                  name="days"
+                  min="1"
+                  placeholder="Number of Days"
+                  value={form.days}
+                  onChange={handleChange}
+                  className={inputClass("days")}
+                />
+                {errors.days && (
+                  <p className="text-red-400 text-xs mt-1 ml-1">
+                    {errors.days}
+                  </p>
+                )}
+              </div>
+
+              {/* Vehicle */}
               <div className="relative">
                 <Car
                   size={18}
@@ -262,3 +420,4 @@ Please contact me.`;
     </section>
   );
 }
+
