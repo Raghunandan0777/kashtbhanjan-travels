@@ -49,7 +49,7 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Gallery"
-          subtitle="A glimpse into the Kashat Bhanjan Travels experience — luxury, comfort, and unforgettable journeys."
+          subtitle="A glimpse into the Shree Kashat Bhanjan Travels experience — luxury, comfort, and unforgettable journeys."
         />
 
         <div

@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="relative w-12 h-12 overflow-hidden rounded-full border border-gold-border group-hover:scale-110 transition-transform duration-300">
               <Image
                 src="/Tlogo.png"
-                alt="Kashat Bhanjan Travels Logo"
+                alt="Shree Kashat Bhanjan Travels Logo"
                 fill
                 className="object-cover animate-pulse-subtle"
                 sizes="48px"
@@ -61,7 +61,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="gold-gradient-text font-heading text-lg sm:text-xl font-bold tracking-wide leading-none">
-                Kashat Bhanjan
+                Shree Kashat Bhanjan
               </span>
               <span className="text-muted text-[10px] uppercase tracking-[0.15em] font-medium leading-tight mt-0.5">
                 Travels

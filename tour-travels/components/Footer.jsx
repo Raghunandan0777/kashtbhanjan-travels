@@ -64,7 +64,7 @@ export default function Footer() {
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-gold-border">
                 <Image
                   src="/Tlogo.png"
-                  alt="Kashat Bhanjan Travels Logo"
+                  alt="Shree Kashat Bhanjan Travels Logo"
                   fill
                   className="object-cover"
                   sizes="40px"
@@ -72,7 +72,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="gold-gradient-text font-heading text-lg font-bold tracking-wide leading-none">
-                  Kashat Bhanjan
+                  Shree Kashat Bhanjan
                 </span>
                 <span className="text-muted text-[9px] uppercase tracking-[0.15em] font-medium leading-tight mt-0.5">
                   Travels
@@ -157,7 +157,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="section-divider mt-10 mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-muted text-xs">
-          <p>&copy; {year} Kashat Bhanjan Travels. All rights reserved.</p>
+          <p>&copy; {year} Shree Kashat Bhanjan Travels. All rights reserved.</p>
           <p>
             Designed with <span className="text-gold">♦</span> for premium
             experiences

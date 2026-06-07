@@ -71,7 +71,7 @@ export default function Hero() {
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
         >
           Travel in Comfort.{" "}
-          <span className="gold-gradient-text">Arrive in Style. <span className="">With Kashat Bhanjan Travels</span></span> 
+          <span className="gold-gradient-text">Arrive in Style. <span className="">With Shree Kashat Bhanjan Travels</span></span> 
         </motion.h1>
 
         {/* Subheadline */}
@@ -82,8 +82,12 @@ export default function Hero() {
           className="text-muted text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Premium taxi, airport transfer, corporate travel, and tour services
-          available 24/7. Experience luxury at every mile.
+          available 24/7. Experience luxury at every mile.  
+
+
         </motion.p>
+        <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">Daly Pickup and drop Servise At Mumbai, Surat,Ahmedabad Airports  </span>
+
 
         {/* CTA Buttons */}
         <motion.div
