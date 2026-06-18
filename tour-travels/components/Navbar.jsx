@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -16,6 +17,14 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  const getHref = (href) => {
+    if (href.startsWith("#")) {
+      return pathname === "/" ? href : `/${href}`;
+    }
+    return href;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -48,11 +57,11 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <a href={pathname === "/" ? "#home" : "/"} className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 overflow-hidden rounded-full border border-gold-border group-hover:scale-110 transition-transform duration-300">
               <Image
                 src="/Tlogo.png"
-                alt="Shree Kashat Bhanjan Travels Logo"
+                alt="Shree Kashtbhanjan Travels Logo"
                 fill
                 className="object-cover animate-pulse-subtle"
                 sizes="48px"
@@ -61,7 +70,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="gold-gradient-text font-heading text-lg sm:text-xl font-bold tracking-wide leading-none">
-                Shree Kashat Bhanjan
+                Shree Kashtbhanjan
               </span>
               <span className="text-muted text-[10px] uppercase tracking-[0.15em] font-medium leading-tight mt-0.5">
                 Travels
@@ -74,7 +83,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={getHref(link.href)}
                 className="text-muted hover:text-gold text-sm font-medium tracking-wide uppercase transition-colors duration-300 relative group"
               >
                 {link.label}
@@ -114,7 +123,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link, i) => (
               <motion.a
                 key={link.href}
-                href={link.href}
+                href={getHref(link.href)}
                 onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import SectionHeading from "./ui/SectionHeading";
 import GlassCard from "./ui/GlassCard";
-import { Users, Wind, Briefcase } from "lucide-react";
+import { Users, Wind, Briefcase, IndianRupee } from "lucide-react";
 
 const WHATSAPP_NUMBER = "917990762538";
 
@@ -13,6 +13,7 @@ const FLEET = [
     passengers: "4 Passengers",
     ac: "AC",
     luggage: "2 Bags",
+    perKm: "₹11/km",
     desc: "Compact luxury sedan — perfect for city rides and short trips.",
   },
   {
@@ -21,6 +22,7 @@ const FLEET = [
     passengers: "6 Passengers",
     ac: "AC",
     luggage: "3 Bags",
+    perKm: "₹14/km",
     desc: "Spacious MPV — ideal for family travel and group outings.",
   },
   {
@@ -29,6 +31,7 @@ const FLEET = [
     passengers: "7 Passengers",
     ac: "AC",
     luggage: "4 Bags",
+    perKm: "₹18/km",
     desc: "Premium MPV — the gold standard for luxury road travel.",
   },
   {
@@ -37,6 +40,7 @@ const FLEET = [
     passengers: "6 Passengers",
     ac: "AC",
     luggage: "3 Bags",
+    perKm: "₹14/km",
     desc: "Modern MPV — stylish comfort with cutting-edge features.",
   },
   {
@@ -45,6 +49,7 @@ const FLEET = [
     passengers: "12+ Passengers",
     ac: "AC / Non-AC",
     luggage: "8+ Bags",
+    perKm: "₹22/km",
     desc: "Group travel specialist — perfect for tours and large parties.",
   },
 ];
@@ -95,6 +100,10 @@ export default function Fleet() {
                   <span className="flex items-center gap-1.5 text-xs text-gold bg-gold/10 px-3 py-1.5 rounded-full">
                     <Briefcase size={13} />
                     {car.luggage}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-xs text-gold bg-gold/10 px-3 py-1.5 rounded-full">
+                    <IndianRupee size={13} />
+                    {car.perKm}
                   </span>
                 </div>
 

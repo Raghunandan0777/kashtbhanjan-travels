@@ -42,26 +42,27 @@ const REVIEWS = [
   },
 ];
 
-export default function Reviews() {
+export default function Reviews({ customReviews }) {
+  const reviewsList = customReviews || REVIEWS;
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const next = useCallback(() => {
     setDirection(1);
-    setCurrent((prev) => (prev + 1) % REVIEWS.length);
-  }, []);
+    setCurrent((prev) => (prev + 1) % reviewsList.length);
+  }, [reviewsList.length]);
 
   const prev = useCallback(() => {
     setDirection(-1);
-    setCurrent((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
-  }, []);
+    setCurrent((prev) => (prev - 1 + reviewsList.length) % reviewsList.length);
+  }, [reviewsList.length]);
 
   useEffect(() => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [next]);
 
-  const review = REVIEWS[current];
+  const review = reviewsList[current];
 
   return (
     <section id="reviews" className="py-20 sm:py-28 bg-card/30">
@@ -132,7 +133,7 @@ export default function Reviews() {
 
             {/* Dots */}
             <div className="flex gap-1.5 sm:gap-2">
-              {REVIEWS.map((_, i) => (
+              {reviewsList.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => {

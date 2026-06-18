@@ -39,7 +39,7 @@ const LOCATION_SUGGESTIONS = [
 
 const WHATSAPP_NUMBER = "917990762538";
 
-export default function BookingForm() {
+export default function BookingForm({ defaultPickup = "", defaultDestination = "", defaultVehicle = "" }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -49,11 +49,11 @@ export default function BookingForm() {
   const [form, setForm] = useState({
     name: "",
     mobile: "",
-    pickup: "",
-    destination: "",
+    pickup: defaultPickup,
+    destination: defaultDestination,
     date: "",
     days: "",
-    vehicle: "",
+    vehicle: defaultVehicle,
   });
   const [errors, setErrors] = useState({});
   const [activeField, setActiveField] = useState(null); // 'pickup' | 'destination' | null
@@ -137,7 +137,7 @@ export default function BookingForm() {
       return;
     }
 
-    const message = `Hello Shree Kashat Bhanjan Travels,
+    const message = `Hello Shree Kashtbhanjan Travels,
 
 I would like to book a vehicle.
 

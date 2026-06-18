@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
-export default function Hero() {
+export default function Hero({ badge, title, subtitle }) {
+  const displayBadge = badge || "Premium Travel Services";
+  const displayTitle = title || (
+    <>
+      Travel in Comfort.{" "}
+      <span className="gold-gradient-text">Arrive in Style. <span className="">With Shree Kashtbhanjan Travels</span></span> 
+    </>
+  );
+  const displaySubtitle = subtitle || "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.";
+
   return (
     <section
       id="home"
@@ -59,7 +68,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
           <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">
-            Premium Travel Services
+            {displayBadge}
           </span>
         </motion.div>
 
@@ -70,8 +79,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
         >
-          Travel in Comfort.{" "}
-          <span className="gold-gradient-text">Arrive in Style. <span className="">With Shree Kashat Bhanjan Travels</span></span> 
+          {displayTitle}
         </motion.h1>
 
         {/* Subheadline */}
@@ -81,12 +89,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="text-muted text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Premium taxi, airport transfer, corporate travel, and tour services
-          available 24/7. Experience luxury at every mile.  
-
-
+          {displaySubtitle}
         </motion.p>
-        <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">Daly Pickup and drop Servise At Mumbai, Surat,Ahmedabad Airports  </span>
+        <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">Daily Pickup and Drop Service at Mumbai, Surat, Ahmedabad Airports</span>
 
 
         {/* CTA Buttons */}

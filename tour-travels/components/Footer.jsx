@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ArrowUp } from "lucide-react";
 
 const NAV_LINKS = [
@@ -45,6 +46,14 @@ const SOCIALS = [
 
 export default function Footer() {
   const [year, setYear] = useState(2026);
+  const pathname = usePathname();
+
+  const getHref = (href) => {
+    if (href.startsWith("#")) {
+      return pathname === "/" ? href : `/${href}`;
+    }
+    return href;
+  };
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -64,7 +73,7 @@ export default function Footer() {
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-gold-border">
                 <Image
                   src="/Tlogo.png"
-                  alt="Shree Kashat Bhanjan Travels Logo"
+                  alt="Shree Kashtbhanjan Travels Logo"
                   fill
                   className="object-cover"
                   sizes="40px"
@@ -72,7 +81,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="gold-gradient-text font-heading text-lg font-bold tracking-wide leading-none">
-                  Shree Kashat Bhanjan
+                  Shree Kashtbhanjan
                 </span>
                 <span className="text-muted text-[9px] uppercase tracking-[0.15em] font-medium leading-tight mt-0.5">
                   Travels
@@ -94,7 +103,7 @@ export default function Footer() {
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
-                    href={link.href}
+                    href={getHref(link.href)}
                     className="text-muted hover:text-gold text-sm transition-colors duration-300"
                   >
                     {link.label}
@@ -157,7 +166,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="section-divider mt-10 mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-muted text-xs">
-          <p>&copy; {year} Shree Kashat Bhanjan Travels. All rights reserved.</p>
+          <p>&copy; {year} Shree Kashtbhanjan Travels. All rights reserved.</p>
           <p>
             Designed with <span className="text-gold">♦</span> for premium
             experiences
