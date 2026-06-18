@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
     <section className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Why Choose Shree Kashat Bhanjan Travels"
+          title="Why Choose Shree Kashtbhanjan Travels"
           subtitle="Every detail is designed to deliver an experience beyond expectation. Here's what sets us apart."
         />
 

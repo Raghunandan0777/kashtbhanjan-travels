@@ -1,4 +1,5 @@
 import React from "react";
+import { SITE_URL } from "@/lib/site-config";
 
 export default function SEOStructuredData({ slug, title, description, canonical, faqs = [], reviews = [] }) {
   // 1. BreadcrumbList Schema
@@ -10,7 +11,7 @@ export default function SEOStructuredData({ slug, title, description, canonical,
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://shreekashtbhanjantravels.com"
+        "item": SITE_URL
       }
     ]
   };
@@ -19,23 +20,23 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     breadcrumbSchema.itemListElement.push({
       "@type": "ListItem",
       "position": 2,
-      "name": title.split("|")[0].trim(),
+      "name": title.split("|")[0].split("–")[0].trim(),
       "item": canonical
     });
   }
 
-  // 2. TravelAgency (LocalBusiness) Schema
+  // 2. TravelAgency & LocalBusiness Combined Schema
   const businessSchema = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "@id": "https://shreekashtbhanjantravels.com/#organization",
+    "@type": ["TravelAgency", "LocalBusiness"],
+    "@id": `${SITE_URL}/#localbusiness`,
     "name": "Shree Kashtbhanjan Travels",
-    "description": description || "Premium taxi, airport transfer, corporate travel, and tour services in Surat, Gujarat.",
-    "url": "https://shreekashtbhanjantravels.com",
-    "logo": "https://shreekashtbhanjantravels.com/Tlogo.png",
-    "image": "https://shreekashtbhanjantravels.com/images/hero_background.png",
+    "description": description || "Premium taxi, airport transfer, corporate travel, and outstation cab booking services in Surat, Gujarat.",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/Tlogo.png`,
+    "image": `${SITE_URL}/images/hero_background.png`,
     "telephone": "+917990762538",
-    "priceRange": "INR",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Kamrej Char Rasta",
@@ -68,7 +69,27 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     ]
   };
 
-  // 3. FAQPage Schema
+  // 3. Organization Schema
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    "name": "Shree Kashtbhanjan Travels",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/Tlogo.png`,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+917990762538",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Gujarati"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/shree_kashtbhanjan_tour_travel?igsh=c2w5OHprbXd0dHZi"
+    ]
+  };
+
+  // 4. FAQPage Schema
   let faqSchema = null;
   if (faqs && faqs.length > 0) {
     faqSchema = {
@@ -85,7 +106,7 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     };
   }
 
-  // 4. Product/Service Schema (for aggregate ratings in Google search results)
+  // 5. Product/Service Schema (for aggregate ratings in Google search results)
   let serviceSchema = null;
   if (slug && reviews && reviews.length > 0) {
     const ratings = reviews.map(r => r.rating);
@@ -93,9 +114,9 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     serviceSchema = {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": title.split("|")[0].trim(),
+      "name": title.split("|")[0].split("–")[0].trim(),
       "description": description,
-      "image": "https://shreekashtbhanjantravels.com/images/hero_background.png",
+      "image": `${SITE_URL}/images/hero_background.png`,
       "brand": {
         "@type": "Brand",
         "name": "Shree Kashtbhanjan Travels"
@@ -131,6 +152,10 @@ export default function SEOStructuredData({ slug, title, description, canonical,
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       {faqSchema && (
         <script

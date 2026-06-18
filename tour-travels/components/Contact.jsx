@@ -108,7 +108,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Shree Kashat Bhanjan Travels Office Location"
+              title="Shree Kashtbhanjan Travels Office Location"
             />
           </motion.div>
         </motion.div>

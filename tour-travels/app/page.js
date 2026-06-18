@@ -12,7 +12,9 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
 import SEOStructuredData from "@/components/SEOStructuredData";
+import SEOContent from "@/components/SEOContent";
 import { SEO_DATA } from "@/lib/seo-data";
+import { SITE_URL } from "@/lib/site-config";
 
 export const metadata = {
   title: SEO_DATA.home.title,
@@ -28,7 +30,7 @@ export const metadata = {
     siteName: "Shree Kashtbhanjan Travels",
     images: [
       {
-        url: "https://shreekashtbhanjantravels.com/images/hero_background.png",
+        url: `${SITE_URL}/images/hero_background.png`,
         width: 1200,
         height: 630,
         alt: "Shree Kashtbhanjan Travels Fleet"
@@ -41,7 +43,7 @@ export const metadata = {
     card: "summary_large_image",
     title: SEO_DATA.home.title,
     description: SEO_DATA.home.description,
-    images: ["https://shreekashtbhanjantravels.com/images/hero_background.png"],
+    images: [`${SITE_URL}/images/hero_background.png`],
   },
 };
 
@@ -60,7 +62,10 @@ export default function Home() {
       />
       <Navbar />
       <main className="relative z-20">
-        <Hero />
+        <Hero 
+          title={homeData.title}
+          subtitle={homeData.heroSubheading}
+        />
         <div className="section-divider" />
         <BookingForm />
         <div className="section-divider" />
@@ -73,6 +78,8 @@ export default function Home() {
         <Reviews />
         <div className="section-divider" />
         <FAQSection faqs={homeData.faqs} />
+        <div className="section-divider" />
+        <SEOContent seoText={homeData.seoText} slug={homeData.slug} />
         <div className="section-divider" />
         <Gallery />
         <div className="section-divider" />

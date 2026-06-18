@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { SITE_URL, BUSINESS } from "@/lib/site-config";
 
 export const metadata = {
@@ -68,6 +69,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-background" suppressHydrationWarning>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DCTMFX7FDF"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DCTMFX7FDF');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -79,4 +93,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 

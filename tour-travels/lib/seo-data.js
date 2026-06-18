@@ -1,16 +1,16 @@
 // Base production domain configuration
-export const BASE_URL = "https://shreekashtbhanjantravels.com";
+export const BASE_URL = "https://www.shree-kashtbhanjan-travels.in";
 
 export const SEO_DATA = {
   home: {
     slug: "",
-    title: "Shree Kashtbhanjan Travels | Best Taxi, Tour & Travel Service in Surat",
-    description: "Looking for a reliable taxi service in Surat? Shree Kashtbhanjan Travels offers 24/7 outstation cabs, airport transfers, tempo traveller rentals, and custom tour packages. Clean fleet & professional drivers. Book instantly on WhatsApp!",
-    keywords: "Shree Kashtbhanjan Travels, Kashtbhanjan Travels, taxi service Surat, airport transfer Surat, outstation cab Surat, tempo traveller Surat, corporate travel Surat, tour packages, WhatsApp booking",
+    title: "Shree Kashtbhanjan Travels – Taxi & Cab Service in Surat",
+    description: "Book 24/7 premium taxi service in Surat. Reliable local cabs, airport transfers, outstation taxis & tempo traveller rentals at best rates. Book on WhatsApp!",
+    keywords: "Shree Kashtbhanjan Travels, Kashtbhanjan Travels, Taxi Service Surat, Cab Service Surat, Airport Taxi Surat, Outstation Taxi Surat, Tempo Traveller Surat, Gujarat Taxi Service, taxi service in Surat, cab booking Surat",
     canonical: `${BASE_URL}/`,
     heroBadge: "Premium Travel Services",
     heroHeading: "Travel in Comfort. Arrive in Style.",
-    heroSubheading: "Premium taxi, airport transfer, corporate travel, and tour packages available 24/7. Experience luxury at every mile.",
+    heroSubheading: "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.",
     defaultPickup: "Surat",
     defaultDestination: "",
     defaultVehicle: "",
@@ -54,7 +54,72 @@ export const SEO_DATA = {
         text: "Used Kashtbhanjan Travels for my airport transfer and was impressed with the punctuality and professionalism. The car was spotlessly clean and the ride was smooth. Five stars!",
         initials: "AP"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Shree Kashtbhanjan Travels: Premium Taxi & Cab Service in Surat</h2>
+      <p>Welcome to <strong>Shree Kashtbhanjan Travels</strong>, your premier destination for reliable, comfortable, and luxury transportation services. Based in the heart of Surat, Gujarat, we specialize in offering a diverse range of travel solutions tailored to meet the needs of modern commuters, tourists, corporate clients, and groups. Whether you need a quick city ride, an early morning airport transfer, or a long-distance outstation tour, we stand ready to serve you 24 hours a day, 7 days a week.</p>
+      <p>As a leading <strong>taxi service in Surat</strong>, we pride ourselves on maintaining a pristine, meticulously cleaned fleet of vehicles and employing certified, background-verified professional drivers. Our commitment to excellence, transparent pricing, and punctual service has made us the go-to choice for thousands of satisfied travelers seeking high-quality <strong>cab service in Surat</strong>.</p>
+      
+      <h3>Why Choose Shree Kashtbhanjan Travels?</h3>
+      <p>Navigating the bustling streets of Surat or embarking on long highway journeys requires trust and reliability. Here is why we are preferred by travelers across Gujarat:</p>
+      <ul>
+        <li><strong>Diverse Fleet Selection:</strong> From budget-friendly premium sedans like Swift Dzire to spacious family SUVs like Maruti Ertiga and Kia Carens, luxury MPVs like Toyota Innova Crysta, and large group vehicles like <strong>Tempo Traveller Surat</strong>, we have the perfect ride for every occasion.</li>
+        <li><strong>24/7 Availability:</strong> Travel does not conform to regular office hours. Our booking and driving teams operate round the clock, ensuring you always have access to a safe ride, even for late-night or early-morning flights.</li>
+        <li><strong>Professional Chauffeurs:</strong> Our drivers are seasoned highway experts, well-trained in passenger safety, route navigation, and courteous behavior. They ensure your journey is safe, quiet, and stress-free.</li>
+        <li><strong>Transparent, Zero-Hidden-Cost Pricing:</strong> We believe in honest billing. The price quoted is the price you pay. We offer fully transparent breakdowns including driver allowances, tolls, and state border permits.</li>
+        <li><strong>Instant WhatsApp Booking:</strong> Skip long phone calls. Use our booking form to instantly send details and secure your ride on WhatsApp with one click.</li>
+      </ul>
+
+      <h3>Our Comprehensive Travel Services</h3>
+      <p>At <strong>Shree Kashtbhanjan Travels</strong>, we provide a complete suite of services designed to cover all aspects of local and regional road travel:</p>
+      
+      <h4>1. Local Cab Booking in Surat</h4>
+      <p>Need to run errands, visit business associates, or explore local attractions in Surat? Our local taxi service offers flexible hourly and daily packages. Enjoy comfortable city tours covering Adajan, VIP Road, Veshu, Varachha, and historical highlights with ease.</p>
+      
+      <h4>2. Reliable Airport Taxi Surat</h4>
+      <p>Never miss a flight again. We provide dedicated <a href="/airport-taxi-surat">Airport Taxi Surat</a> transfers. We serve Surat Airport (STV) and offer regular long-distance highway transfers to Mumbai International Airport (BOM) and Ahmedabad International Airport (AMD) with real-time flight tracking to adjust pickup times dynamically.</p>
+      
+      <h4>3. Outstation Taxi & Intercity Travel</h4>
+      <p>Plan your next road trip with our dependable <a href="/outstation-taxi-surat">Outstation Taxi Surat</a>. We offer comfortable one-way drops and flexible round-trip packages to popular destinations. Visit industrial cities, heritage towns, or scenic getaways in Maharashtra, Rajasthan, and Madhya Pradesh with experienced highway chauffeurs.</p>
+      
+      <h4>4. Luxury Tempo Traveller Surat Rentals</h4>
+      <p>Traveling with family, friends, or a corporate group? Don't split up. Rent our luxury <a href="/tempo-traveller-rental-surat">Tempo Traveller Surat</a> ranging from 12 to 26 seats. Complete with pushback seats, dual AC vents, LCD entertainment screens, and ample luggage space, our tempo travellers make group tours memorable and comfortable.</p>
+
+      <h3>Popular Outstation Routes & Travel Times from Surat</h3>
+      <table class="seo-table">
+        <thead>
+          <tr>
+            <th>Destination Route</th>
+            <th>Approx. Distance</th>
+            <th>Travel Duration</th>
+            <th>Best Suited Vehicle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/surat-to-ahmedabad-taxi">Surat to Ahmedabad Taxi</a></td>
+            <td>265 KM</td>
+            <td>4.5 - 5 Hours</td>
+            <td>Sedan / SUV / Tempo Traveller</td>
+          </tr>
+          <tr>
+            <td><a href="/surat-to-mumbai-taxi">Surat to Mumbai Taxi</a></td>
+            <td>280 KM</td>
+            <td>5.5 - 6 Hours</td>
+            <td>Innova Crysta / Toyota Innova</td>
+          </tr>
+          <tr>
+            <td><a href="/surat-to-vadodara-taxi">Surat to Vadodara Taxi</a></td>
+            <td>150 KM</td>
+            <td>2.5 - 3 Hours</td>
+            <td>Premium Sedan / Ertiga</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Book Your Premium Ride Today</h3>
+      <p>Whether you require a daily commute, corporate fleet management, wedding transportation, or a custom holiday tour package, <strong>Shree Kashtbhanjan Travels</strong> delivers the ultimate in road travel comfort. We ensure a premium <strong>Gujarat Taxi Service</strong> experience that prioritizes your comfort, security, and time. Click the WhatsApp button to book your cab now and experience travel at its finest!</p>
+    `
   },
   "taxi-service-surat": {
     slug: "taxi-service-surat",
@@ -97,14 +162,30 @@ export const SEO_DATA = {
         text: "Booked a cab for family shopping in Adajan and VIP Road. Safe driving and very convenient. Highly recommend Shree Kashtbhanjan Travels.",
         initials: "SP"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Choose the Best Local Taxi & Cab Service in Surat</h2>
+      <p>Getting around Gujarat's commercial hub has never been easier. <strong>Shree Kashtbhanjan Travels</strong> offers the finest <strong>Taxi Service Surat</strong> has to offer, designed to give you a stress-free travel experience across the city. Whether you need a cab for business meetings, shopping sprees in local textile markets, family gatherings, or tourist sightseeing, we provide reliable, secure, and clean transportation on demand.</p>
+      
+      <h3>Flexible Hourly & Daily Rental Packages</h3>
+      <p>We understand that every city traveler has unique schedules. To accommodate your travel, we offer customized local packages:</p>
+      <ul>
+        <li><strong>Half-Day Rentals (4 Hours / 40 KM):</strong> Ideal for quick doctor visits, business meetings, or short errands.</li>
+        <li><strong>Full-Day Rentals (8 Hours / 80 KM):</strong> Perfect for extensive shopping tours, corporate travel, or family outings.</li>
+        <li><strong>Extended Day Rentals (12 Hours / 120 KM):</strong> Tailored for local sightseeing, covering diamond and textile hubs, and dinner outings.</li>
+      </ul>
+
+      <h3>Clean Cars & Experienced Local Drivers</h3>
+      <p>Our fleet comprises premium sedans like Swift Dzire, comfortable SUVs like Ertiga, and luxury MPVs like Innova Crysta. All cars are cleaned and sanitized before every booking. Our drivers are courteous, local residents who are intimately familiar with Surat's neighborhoods including Adajan, VIP Road, Vesu, Piplod, and Varachha, allowing you to bypass heavy traffic and arrive on time.</p>
+      <p>Maximize your local travel comfort with the premium <strong>Cab Service Surat</strong> relies on. Contact us today via our quick WhatsApp interface to secure your clean local taxi instantly!</p>
+    `
   },
-  "airport-transfer-surat": {
-    slug: "airport-transfer-surat",
+  "airport-taxi-surat": {
+    slug: "airport-taxi-surat",
     title: "Surat Airport Cab Service | Premium Airport Transfers",
     description: "On-time airport pick & drop cab service between Surat Airport, Mumbai Airport (BOM), Ahmedabad Airport (AMD), and Surat city. 24/7 premium vehicles and professional service. Book on WhatsApp!",
-    keywords: "airport transfer surat, surat airport cab, mumbai airport to surat taxi, ahmedabad airport to surat cab, airport pick drop surat",
-    canonical: `${BASE_URL}/airport-transfer-surat`,
+    keywords: "airport transfer surat, airport taxi surat, surat airport cab, mumbai airport to surat taxi, ahmedabad airport to surat cab, airport pick drop surat",
+    canonical: `${BASE_URL}/airport-taxi-surat`,
     heroBadge: "Airport Transfers",
     heroHeading: "On-Time Airport Cabs & Transfers in Surat",
     heroSubheading: "Never miss a flight. Guaranteed punctual pickups, flight tracking, and comfortable airport transfers to Surat, Mumbai, or Ahmedabad airports.",
@@ -140,7 +221,22 @@ export const SEO_DATA = {
         text: "Punctual, safe, and professional. Shree Kashtbhanjan is my go-to for Surat Airport pickups. Their drivers are polite and helpful with luggage.",
         initials: "NG"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Hassle-Free Airport Taxi & Transfers in Surat</h2>
+      <p>Airport journeys require promptness and reliability. At <strong>Shree Kashtbhanjan Travels</strong>, we provide premium, round-the-clock <strong>Airport Taxi Surat</strong> services, ensuring you reach your flight on time and get a comfortable drive back home. We serve Surat Airport (STV) for local transfers and also offer specialized long-distance highway transfers to Mumbai International Airport (BOM) and Ahmedabad International Airport (AMD).</p>
+
+      <h3>Why Book Your Airport Transfers With Us?</h3>
+      <ul>
+        <li><strong>Guaranteed Punctuality:</strong> We understand the importance of catching a flight. Our drivers arrive at your doorstep 15 minutes before the scheduled pickup.</li>
+        <li><strong>Flight Status Tracking:</strong> For airport pickups, we track your incoming flight. If your flight is delayed, we automatically adjust our pickup time to ensure a driver is waiting when you exit.</li>
+        <li><strong>Comfortable Fleet for Luggage:</strong> Airport travel usually means luggage. Our spacious Maruti Ertiga and luxury Toyota Innova Crysta offer plenty of boot space to secure all your bags comfortably.</li>
+        <li><strong>24/7 Security & Support:</strong> Late-night flights or early morning departures can feel stressful. Our vehicles are GPS-tracked, and our drivers are thoroughly vetted highway professionals, ensuring a safe night ride.</li>
+      </ul>
+
+      <h3>Daily Airport Cab Routes</h3>
+      <p>Avoid the stress of waiting in long taxi queues at the terminal. We provide predefined, transparently priced transfer packages from Surat to Mumbai Airport (BOM), Ahmedabad Airport (AMD), and local Surat Airport routes. Reserve your airport cab via WhatsApp today for a seamless, comfortable journey.</p>
+    `
   },
   "outstation-taxi-surat": {
     slug: "outstation-taxi-surat",
@@ -183,13 +279,27 @@ export const SEO_DATA = {
         text: "Outstanding service. The one-way taxi from Surat to Pune was booked last-minute, yet they delivered a great sedan with a very respectful driver.",
         initials: "AJ"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Affordable Outstation Taxi & Cab Booking in Surat</h2>
+      <p>Embark on long journeys with the absolute comfort of <strong>Shree Kashtbhanjan Travels</strong>. We are a leading provider of premium <strong>Outstation Taxi Surat</strong> packages, offering reliable one-way drops and multi-day round-trip tours. Whether you're heading for a weekend getaway in the hills of Saputara, a corporate trip to Mumbai, or a family pilgrimage to Somnath, we ensure your outstation travel is pleasant, affordable, and safe.</p>
+
+      <h3>Flexible Outstation Ride Categories</h3>
+      <ul>
+        <li><strong>One-Way Drop Taxi:</strong> Only pay for the distance you travel! If you're traveling one-way from Surat to cities like Mumbai, Ahmedabad, or Vadodara, our flat-rate one-way drop taxis save you up to 50% compared to traditional round-trip charges.</li>
+        <li><strong>Round-Trip Packages:</strong> Ideal for vacations, multi-city tours, and business travels. Our round-trip packages offer flexible mileage, letting you explore your destination at your own pace.</li>
+        <li><strong>Custom Multi-Day Tours:</strong> Let us help you design the perfect travel itinerary. We offer multi-day custom tours covering popular tourist loops in Gujarat, Maharashtra, and Rajasthan.</li>
+      </ul>
+
+      <h3>Experienced Highway Chauffeurs</h3>
+      <p>Driving on national highways requires specific skills. Our outstation drivers are seasoned road specialists who are well-versed in highway rules, safety practices, and optimal routes. Travel comfortably in our clean, GPS-tracked fleet featuring Swift Dzire, Ertiga, and Innova Crysta. Book your outstation ride on WhatsApp now and enjoy transparent, all-inclusive pricing with no hidden charges.</p>
+    `
   },
   "tempo-traveller-rental-surat": {
     slug: "tempo-traveller-rental-surat",
     title: "Tempo Traveller on Rent in Surat | 12 to 20 Seater Hire",
     description: "Rent luxury Tempo Travellers in Surat for family trips, weddings, corporate excursions, and group picnics. Available in 12, 14, 17, and 20 seater AC layouts. Book on WhatsApp for best group rates!",
-    keywords: "tempo traveller rental surat, tempo traveller on rent surat, 12 seater tempo traveller surat, 17 seater tempo traveller surat, hire tempo traveller surat",
+    keywords: "tempo traveller rental surat, tempo traveller on rent surat, 12 seater tempo traveller surat, 17 seater tempo traveller surat, hire tempo traveller surat, Tempo Traveller Surat",
     canonical: `${BASE_URL}/tempo-traveller-rental-surat`,
     heroBadge: "Tempo Traveller Hire",
     heroHeading: "Luxury Tempo Traveller Rentals in Surat",
@@ -226,7 +336,23 @@ export const SEO_DATA = {
         text: "Booked a 14-seater for a corporate team outing from Surat to Daman. Seamless process, punctual service, and invoice was provided promptly. Great professional service.",
         initials: "CA"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Luxury Tempo Traveller Rentals in Surat</h2>
+      <p>When you are traveling with a large group of family members, close friends, or corporate colleagues, splitting the group into multiple smaller cabs can reduce the fun of the journey. <strong>Shree Kashtbhanjan Travels</strong> offers the perfect solution with our luxury <strong>Tempo Traveller Surat</strong> rentals, allowing your entire group to travel together in comfort and style.</p>
+
+      <h3>Premium Features for Group Excursions</h3>
+      <p>Our modern fleet of Tempo Travellers (available in 12, 14, 17, 20, and 26-seater AC configurations) is built to provide a premium passenger experience:</p>
+      <ul>
+        <li><strong>Comfortable Reclining Seats:</strong> Ergonomically designed pushback seats with individual headrests, giving you ample legroom for long highway journeys.</li>
+        <li><strong>Powerful Dual Air Conditioning:</strong> Multi-vent AC systems that keep the entire cabin cool, even during hot summer days in Gujarat.</li>
+        <li><strong>Entertainment On Board:</strong> Equipped with high-quality music systems, Bluetooth connectivity, and LCD TV screens to keep your group entertained.</li>
+        <li><strong>Generous Luggage Space:</strong> Separate luggage carriers and spacious under-seat areas to secure all your bags easily.</li>
+      </ul>
+
+      <h3>Perfect for All Group Occasions</h3>
+      <p>Our tempo travellers are frequently hired for weddings, local sight-seeing tours, corporate team-building outings, and pilgrimage trips to heritage temples. Driven by experienced, professional outstation chauffeurs, we guarantee a safe, comfortable, and fun group ride. Request your custom group booking quote on WhatsApp today!</p>
+    `
   },
   "surat-to-ahmedabad-taxi": {
     slug: "surat-to-ahmedabad-taxi",
@@ -269,7 +395,22 @@ export const SEO_DATA = {
         text: "Our family regularly books Shree Kashtbhanjan for Surat-Ahmedabad travels. Their Innova is always spotless, and driver quality is superior. Worth every rupee.",
         initials: "MS"
       }
-    ]
+    ],
+    seoText: `
+      <h2>On-Time Surat to Ahmedabad Taxi & Cab Service</h2>
+      <p>Travel seamlessly between Gujarat's diamond city and its largest commercial capital. <strong>Shree Kashtbhanjan Travels</strong> offers the most reliable <strong>Surat to Ahmedabad Taxi</strong> service, operating 24 hours a day, 7 days a week. Skip the hassles of rigid train schedules and uncomfortable bus journeys — travel door-to-door in our clean, premium cabs driven by experienced intercity chauffeurs.</p>
+
+      <h3>Fast & Safe Express Route Driving</h3>
+      <p>The journey from Surat to Ahmedabad spans approximately 265 KM. Our drivers utilize National Highway 48 and the premium NE1 (Nadiad-Ahmedabad) Expressway, completing the drive in a safe and comfortable 4.5 to 5 hours. We schedule comfortable highway stops at highly-rated family restaurants for refreshments and dining.</p>
+
+      <h3>Flexible Fares and One-Way Drops</h3>
+      <p>Whether you require an early morning pickup for a business conference, a family holiday round-trip, or an urgent drop-off at Ahmedabad International Airport (AMD), we provide tailored pricing packages:</p>
+      <ul>
+        <li><strong>One-Way Drop:</strong> Flat-rate billing covering all tolls and taxes. Pay only for the journey to Ahmedabad, saving up to 50% compared to traditional return cab bookings.</li>
+        <li><strong>Round-Trip Cab Rental:</strong> Ideal for weekend visits, business trips, or multi-day tours, giving you full access to the vehicle and driver during your stay in Ahmedabad.</li>
+      </ul>
+      <p>Book your Surat to Ahmedabad cab on WhatsApp today for a premium, comfortable highway experience!</p>
+    `
   },
   "surat-to-mumbai-taxi": {
     slug: "surat-to-mumbai-taxi",
@@ -312,7 +453,17 @@ export const SEO_DATA = {
         text: "I always hire Shree Kashtbhanjan Travels when visiting family in Surat. Standard of service is exceptional, billing is transparent, and WhatsApp replies are instant.",
         initials: "RC"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Direct Surat to Mumbai Taxi & Airport Transfers</h2>
+      <p>Travel between Surat and the financial capital of India in absolute relaxation. <strong>Shree Kashtbhanjan Travels</strong> offers premium, dedicated <strong>Surat to Mumbai Taxi</strong> services. Whether you are heading to South Mumbai for business, catching an international flight at Chhatrapati Shivaji Maharaj International Airport (BOM), or returning home to Surat, we provide safe, door-to-door transportation 24 hours a day.</p>
+
+      <h3>Specialized Mumbai Airport Drop-Offs (BOM)</h3>
+      <p>Reaching Mumbai Airport from Surat can be highly stressful via train or bus due to luggage handling and local transfers. Our direct highway taxi picks you up from your home or office in Surat and drops you off directly at your departure terminal. Our chauffeurs are highly experienced in navigating Mumbai traffic and airport terminal guidelines, guaranteeing a punctual and stress-free arrival.</p>
+
+      <h3>Safe Highway Travel & Transparent Rates</h3>
+      <p>Spanning 280 KM along National Highway 48, the journey takes approximately 5.5 to 6 hours. We offer all-inclusive fixed fares that cover all toll charges, border taxes, and driver allowances. Choose from our clean, premium vehicle classes — sedans like Swift Dzire, family SUVs like Maruti Ertiga, or luxury executive rides in a Toyota Innova Crysta. Book your Surat to Mumbai taxi on WhatsApp today!</p>
+    `
   },
   "surat-to-vadodara-taxi": {
     slug: "surat-to-vadodara-taxi",
@@ -355,6 +506,21 @@ export const SEO_DATA = {
         text: "Clean car, well-mannered driver, and very easy booking via WhatsApp. Best highway travel experience between Surat and Vadodara.",
         initials: "MM"
       }
-    ]
+    ],
+    seoText: `
+      <h2>Reliable & Swift Surat to Vadodara Taxi Service</h2>
+      <p>Need to travel between Surat and Vadodara for business meetings, industrial visits, or family occasions? <strong>Shree Kashtbhanjan Travels</strong> offers the most reliable <strong>Surat to Vadodara Taxi</strong> service, providing a comfortable, safe, and punctual highway journey. Skip the public transport hassles and travel door-to-door in under 3 hours in our clean, premium cabs.</p>
+
+      <h3>Comfortable 2.5-Hour Highway Journey</h3>
+      <p>The distance between Surat and Vadodara is approximately 150 KM along the well-maintained National Highway 48. Driven by our courteous and experienced chauffeurs, the journey is smooth and swift. Our drivers are trained in highway safety and drive defensively, ensuring you can work, rest, or prepare for your meetings in peace.</p>
+
+      <h3>Tailored Packages to Meet Your Needs</h3>
+      <ul>
+        <li><strong>One-Way Drop Taxi:</strong> Ideal for travelers who only need to get to Vadodara without a return schedule. Pay only for the one-way distance at a fixed all-inclusive rate.</li>
+        <li><strong>Same-Day Return Packages:</strong> Specially designed for corporate travelers and business professionals who have meetings in Vadodara and wish to return to Surat on the same day. Includes free waiting time.</li>
+        <li><strong>Multi-Day Round-Trips:</strong> Perfect for leisurely travel or family holidays, providing continuous access to the vehicle and chauffeur.</li>
+      </ul>
+      <p>Experience a premium highway commute. Secure your Surat to Vadodara taxi on WhatsApp with our quick booking system today!</p>
+    `
   }
 };

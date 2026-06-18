@@ -120,15 +120,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                "Airport Transfers",
-                "City Rides",
-                "Tour Packages",
-                "Corporate Travel",
-                "Outstation Trips",
-                "Wedding Cars",
+                { label: "Taxi Service Surat", href: "/taxi-service-surat" },
+                { label: "Airport Taxi Surat", href: "/airport-taxi-surat" },
+                { label: "Tempo Traveller Surat", href: "/tempo-traveller-rental-surat" },
+                { label: "Outstation Taxi Surat", href: "/outstation-taxi-surat" },
+                { label: "Surat to Mumbai Taxi", href: "/surat-to-mumbai-taxi" },
+                { label: "Surat to Ahmedabad Taxi", href: "/surat-to-ahmedabad-taxi" },
+                { label: "Surat to Vadodara Taxi", href: "/surat-to-vadodara-taxi" },
               ].map((s) => (
-                <li key={s}>
-                  <span className="text-muted text-sm">{s}</span>
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    className="text-muted hover:text-gold text-sm transition-colors duration-300"
+                  >
+                    {s.label}
+                  </a>
                 </li>
               ))}
             </ul>

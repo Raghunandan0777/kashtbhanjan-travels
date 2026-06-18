@@ -3,7 +3,7 @@
  * Import from here instead of hardcoding values across components.
  */
 
-export const SITE_URL = "https://shreekashtbhanjantravels.com";
+export const SITE_URL = "https://www.shree-kashtbhanjan-travels.in";
 
 export const BUSINESS = {
   name: "Shree Kashtbhanjan Travels",

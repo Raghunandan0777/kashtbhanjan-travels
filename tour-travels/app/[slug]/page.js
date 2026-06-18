@@ -12,6 +12,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
 import SEOStructuredData from "@/components/SEOStructuredData";
+import SEOContent from "@/components/SEOContent";
 import { SEO_DATA } from "@/lib/seo-data";
 
 export const dynamicParams = false;
@@ -19,7 +20,7 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   return [
     { slug: "taxi-service-surat" },
-    { slug: "airport-transfer-surat" },
+    { slug: "airport-taxi-surat" },
     { slug: "outstation-taxi-surat" },
     { slug: "tempo-traveller-rental-surat" },
     { slug: "surat-to-ahmedabad-taxi" },
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }) {
       siteName: "Shree Kashtbhanjan Travels",
       images: [
         {
-          url: "https://shreekashtbhanjantravels.com/images/hero_background.png",
+          url: "https://www.shree-kashtbhanjan-travels.in/images/hero_background.png",
           width: 1200,
           height: 630,
           alt: "Shree Kashtbhanjan Travels Fleet"
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: ["https://shreekashtbhanjantravels.com/images/hero_background.png"],
+      images: ["https://www.shree-kashtbhanjan-travels.in/images/hero_background.png"],
     },
   };
 }
@@ -103,6 +104,8 @@ export default async function ServicePage({ params }) {
         <Reviews customReviews={seo.reviews} />
         <div className="section-divider" />
         <FAQSection faqs={seo.faqs} />
+        <div className="section-divider" />
+        <SEOContent seoText={seo.seoText} slug={slug} />
         <div className="section-divider" />
         <Gallery />
         <div className="section-divider" />
