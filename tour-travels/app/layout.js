@@ -13,6 +13,9 @@ export const metadata = {
     "Experience luxury travel with Shree Kashtbhanjan Travels. Premium local taxi, airport transfers, corporate travel, and outstation tour packages in Surat, Gujarat.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  verification: {
+    google: "eAuaLFt1lkKBnkE0hhEAcWtMcA4Dkj7On1cVMKn7-qA",
+  },
   openGraph: {
     title:
       "Shree Kashtbhanjan Travels — Premium Taxi, Tour & Travel Services in Surat",
