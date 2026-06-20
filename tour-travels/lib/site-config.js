@@ -7,9 +7,9 @@ export const SITE_URL = "https://www.shree-kashtbhanjan-travels.in";
 
 export const BUSINESS = {
   name: "Shree Kashtbhanjan Travels",
-  phone: "+917990762538",
+  phone: "+917490864522",
   email: "renilprajapati94@gmail.com",
-  whatsapp: "917990762538",
+  whatsapp: "917490864522",
   address: {
     streetAddress: "123 Kamrej Char Rasta",
     addressLocality: "Surat",

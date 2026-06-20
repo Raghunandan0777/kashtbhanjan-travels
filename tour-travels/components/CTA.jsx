@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const WHATSAPP_NUMBER = "917990762538";
+const WHATSAPP_NUMBER = "917490864522";
 
 export default function CTA() {
   const ref = useRef(null);

@@ -38,7 +38,7 @@ const LOCATION_SUGGESTIONS = [
   "Ahmedabad Airport (AMD)",
 ];
 
-const WHATSAPP_NUMBER = "917990762538";
+const WHATSAPP_NUMBER = "917490864522";
 
 export default function BookingForm({ defaultPickup = "", defaultDestination = "", defaultVehicle = "" }) {
   const ref = useRef(null);
@@ -333,6 +333,16 @@ Please contact me.`;
                   name="date"
                   value={form.date}
                   onChange={handleChange}
+                  onFocus={(e) => {
+                    try {
+                      e.target.showPicker();
+                    } catch (err) {}
+                  }}
+                  onClick={(e) => {
+                    try {
+                      e.target.showPicker();
+                    } catch (err) {}
+                  }}
                   className={`${inputClass("date")} ${!form.date ? "text-muted/50" : ""}`}
                 />
                 {errors.date && (
@@ -395,6 +405,14 @@ Please contact me.`;
                   </p>
                 )}
               </div>
+            </div>
+
+            {/* Info Banner */}
+            <div className="text-center mt-3 mb-5 border-y border-gold/15 py-2.5">
+              <p className="text-gold text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                Daily Pickup and Drop Service at Mumbai, Surat, Ahmedabad Airports
+              </p>
             </div>
 
             {/* Submit */}

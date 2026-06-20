@@ -17,7 +17,7 @@ export const SEO_DATA = {
     faqs: [
       {
         question: "How do I book a ride with Shree Kashtbhanjan Travels?",
-        answer: "Booking a ride is quick and simple! You can use our website booking form which automatically redirects you to WhatsApp with all details, or you can call us directly at +91 79907 62538."
+        answer: "Booking a ride is quick and simple! You can use our website booking form which automatically redirects you to WhatsApp with all details, or you can call us directly at +91 74908 64522."
       },
       {
         question: "What types of vehicles are available in your fleet?",

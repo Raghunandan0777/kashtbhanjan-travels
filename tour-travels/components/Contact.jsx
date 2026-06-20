@@ -8,14 +8,14 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 79907 62538",
-    href: "tel:+917990762538",
+    value: "+91 74908 64522",
+    href: "tel:+917490864522",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+91 79907 62538",
-    href: "https://wa.me/917990762538",
+    value: "+91 74908 64522",
+    href: "https://wa.me/917490864522",
   },
   {
     icon: Mail,

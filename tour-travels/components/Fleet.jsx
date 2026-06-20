@@ -4,7 +4,7 @@ import SectionHeading from "./ui/SectionHeading";
 import GlassCard from "./ui/GlassCard";
 import { Users, Wind, Briefcase, IndianRupee } from "lucide-react";
 
-const WHATSAPP_NUMBER = "917990762538";
+const WHATSAPP_NUMBER = "917490864522";
 
 const FLEET = [
   {
@@ -12,7 +12,7 @@ const FLEET = [
     image: "/images/swift_dzire.png",
     passengers: "4 Passengers",
     ac: "AC",
-    luggage: "2 Bags",
+    luggage: "3 Bags",
     perKm: "₹13/km",
     desc: "Compact luxury sedan — perfect for city rides and short trips.",
   },
@@ -21,35 +21,35 @@ const FLEET = [
     image: "/images/maruti_ertiga.png",
     passengers: "6 Passengers",
     ac: "AC",
-    luggage: "3 Bags",
-    perKm: "₹14/km",
+    luggage: "6 Bags",
+    perKm: "₹15/km",
     desc: "Spacious MPV — ideal for family travel and group outings.",
-  },
-  {
-    name: "Toyota Innova Crysta",
-    image: "/images/innova_crysta.png",
-    passengers: "7 Passengers",
-    ac: "AC",
-    luggage: "4 Bags",
-    perKm: "₹18/km",
-    desc: "Premium MPV — the gold standard for luxury road travel.",
   },
   {
     name: "Kia Carens",
     image: "/images/kia_carens.png",
     passengers: "6 Passengers",
     ac: "AC",
-    luggage: "3 Bags",
-    perKm: "₹14/km",
+    luggage: "6 Bags",
+    perKm: "₹18/km",
     desc: "Modern MPV — stylish comfort with cutting-edge features.",
+  },
+  {
+    name: "Toyota Innova Crysta",
+    image: "/images/innova_crysta.png",
+    passengers: "7 Passengers",
+    ac: "AC",
+    luggage: "7 Bags",
+    perKm: "₹22/km",
+    desc: "Premium MPV — the gold standard for luxury road travel.",
   },
   {
     name: "Tempo Traveller",
     image: "/images/tempo_traveller.png",
     passengers: "12+ Passengers",
     ac: "AC / Non-AC",
-    luggage: "8+ Bags",
-    perKm: "₹22/km",
+    luggage: "10+ Bags",
+    perKm: "₹30/km",
     desc: "Group travel specialist — perfect for tours and large parties.",
   },
   {
@@ -57,8 +57,8 @@ const FLEET = [
     image: "/images/force_urbania.png",
     passengers: "10-17 Passengers",
     ac: "AC",
-    luggage: "8+ Bags",
-    perKm: "₹25/km",
+    luggage: "10+ Bags",
+    perKm: "₹30/km",
     desc: "Ultra-luxury premium van — ideal for executive group tours and premium family travel.",
   },
 ];

@@ -35,7 +35,7 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     "url": SITE_URL,
     "logo": `${SITE_URL}/Tlogo.png`,
     "image": `${SITE_URL}/images/hero_background.png`,
-    "telephone": "+917990762538",
+    "telephone": "+917490864522",
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
@@ -79,7 +79,7 @@ export default function SEOStructuredData({ slug, title, description, canonical,
     "logo": `${SITE_URL}/Tlogo.png`,
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+917990762538",
+      "telephone": "+917490864522",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": ["English", "Hindi", "Gujarati"]

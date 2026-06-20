@@ -91,7 +91,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="tel:+917990762538"
+              href="tel:+917490864522"
               className="flex items-center gap-2 gold-gradient-bg text-background px-5 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300"
             >
               <Phone size={14} />
@@ -134,7 +134,7 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="tel:+917990762538"
+              href="tel:+917490864522"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
