@@ -54,7 +54,7 @@ const FLEET = [
   },
   {
     name: "Force Urbania",
-    image: "/images/force_urbania.png",
+    image: "/images/force_urbania.jpg",
     passengers: "10-17 Passengers",
     ac: "AC",
     luggage: "10+ Bags",
