@@ -20,8 +20,8 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "renilprajapati94@gmail.com",
-    href: "mailto:renilprajapati94@gmail.com",
+    value: "shreekashatbhanjantravels522@gmail.com",
+    href: "mailto:shreekashatbhanjantravels522@gmail.com",
   },
   {
     icon: MapPin,

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
         },
       ],
       locale: "en_IN",
-      type: "website",
+      type: "product",
     },
     twitter: {
       card: "summary_large_image",

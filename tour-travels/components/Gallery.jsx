@@ -8,42 +8,42 @@ import { ZoomIn, X } from "lucide-react";
 
 const GALLERY_IMAGES = [
   {
-    src: "/images/gallery_family_goa.png",
+    src: "/images/gallery_family_goa.webp",
     alt: "Patel Family enjoying beach sunset in Goa",
     label: "Goa Beach Holiday",
     family: "The Patel Family, Surat",
     experience: "Our trip to Goa was absolutely flawless. The Innova Crysta was spotless, and the driver knew all the scenic spots. The kids had a blast!",
   },
   {
-    src: "/images/gallery_family_rajasthan.png",
+    src: "/images/gallery_family_rajasthan.webp",
     alt: "Shah Family visiting palaces in Rajasthan",
     label: "Jaipur Heritage Tour",
     family: "The Shah Family, Surat",
     experience: "Exploring the majestic palaces of Jaipur with Kashtbhanjan Travels was a delight. Having a reliable cab and an expert highway driver made the long journey stress-free and very comfortable.",
   },
   {
-    src: "/images/gallery_family_himachal.png",
+    src: "/images/gallery_family_himachal.webp",
     alt: "Mehta Family in snow-capped Manali",
     label: "Manali Snow Adventure",
     family: "The Mehta Family, Surat",
     experience: "A wonderful family vacation in the snow-capped hills of Manali. Shree Kashtbhanjan travels arranged everything perfectly. The Tempo Traveller was very spacious and warm.",
   },
   {
-    src: "/images/gallery_family_gujarat.png",
+    src: "/images/gallery_family_gujarat.webp",
     alt: "Prajapati Family visiting temples in Gujarat",
     label: "Gujarat Temple Tour",
     family: "The Prajapati Family, Surat",
     experience: "We booked a tour covering Somnath and Dwarka for three generations of our family. Punctual service, safe highway driving, and great hospitality throughout the trip.",
   },
   {
-    src: "/images/gallery_interior.png",
+    src: "/images/gallery_interior.webp",
     alt: "Luxury cab premium interiors",
     label: "Premium Comfort",
     family: "Aditya Sen, Corporate Client",
     experience: "Extremely clean, modern interiors with premium upholstery. It feels like travelling in a private lounge. Perfect for business trips.",
   },
   {
-    src: "/images/gallery_airport.png",
+    src: "/images/gallery_airport.webp",
     alt: "Airport pickup service",
     label: "Mumbai Airport Transfer",
     family: "Dr. Rhea Desai, Surat",

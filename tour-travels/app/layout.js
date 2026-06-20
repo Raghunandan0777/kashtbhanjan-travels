@@ -26,7 +26,7 @@ export const metadata = {
     siteName: BUSINESS.name,
     images: [
       {
-        url: "/images/hero_background.png",
+        url: "/images/hero_background.webp",
         width: 1200,
         height: 630,
         alt: "Shree Kashtbhanjan Travels Fleet",
@@ -41,7 +41,7 @@ export const metadata = {
       "Shree Kashtbhanjan Travels — Premium Taxi, Tour & Travel Services",
     description:
       "Premium local taxi, airport transfers, corporate travel, and outstation tour packages in Surat, Gujarat.",
-    images: ["/images/hero_background.png"],
+    images: ["/images/hero_background.webp"],
   },
 };
 
@@ -63,16 +63,28 @@ const taxiServiceJsonLd = {
     postalCode: BUSINESS.address.postalCode,
     addressCountry: BUSINESS.address.addressCountry,
   },
-  areaServed: BUSINESS.areaServed.map((area) => ({
-    "@type": "City",
-    name: area,
-  })),
+  areaServed: [
+    ...BUSINESS.areaServed.cities.map((city) => ({
+      "@type": "City",
+      name: city,
+    })),
+    ...BUSINESS.areaServed.states.map((state) => ({
+      "@type": "State",
+      name: state,
+    })),
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-background" suppressHydrationWarning>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-background focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DCTMFX7FDF"
           strategy="afterInteractive"

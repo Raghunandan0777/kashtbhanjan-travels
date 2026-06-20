@@ -66,13 +66,13 @@ export default function Footer() {
   return (
     <footer className="bg-card/50 border-t border-gold-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-gold-border">
                 <Image
-                  src="/Tlogo.png"
+                  src="/logo.webp"
                   alt="Shree Kashtbhanjan Travels Logo"
                   fill
                   className="object-cover"
@@ -134,6 +134,31 @@ export default function Footer() {
                     className="text-muted hover:text-gold text-sm transition-colors duration-300"
                   >
                     {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Tour Packages */}
+          <div>
+            <h4 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">
+              Tour Packages
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Goa Tour Package", href: "/tours/goa-tour-package-from-surat" },
+                { label: "Rajasthan Tour Package", href: "/tours/rajasthan-tour-package-from-surat" },
+                { label: "Kashmir Tour Package", href: "/tours/kashmir-tour-package-from-surat" },
+                { label: "Gujarat Tour Package", href: "/tours/gujarat-tour-package-from-surat" },
+                { label: "Manali Tour Package", href: "/tours/manali-tour-package-from-surat" },
+              ].map((t) => (
+                <li key={t.href}>
+                  <a
+                    href={t.href}
+                    className="text-muted hover:text-gold text-sm transition-colors duration-300"
+                  >
+                    {t.label}
                   </a>
                 </li>
               ))}

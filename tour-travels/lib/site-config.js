@@ -17,16 +17,20 @@ export const BUSINESS = {
     postalCode: "394180",
     addressCountry: "IN",
   },
-  areaServed: [
-    "Surat",
-    "Ahmedabad",
-    "Mumbai",
-    "Vadodara",
-    "Rajkot",
-    "Gujarat",
-    "Rajasthan",
-    "Goa",
-    "Himachal Pradesh",
-    "Jammu & Kashmir",
-  ],
+  areaServed: {
+    cities: [
+      "Surat",
+      "Ahmedabad",
+      "Mumbai",
+      "Vadodara",
+      "Rajkot",
+    ],
+    states: [
+      "Gujarat",
+      "Rajasthan",
+      "Goa",
+      "Himachal Pradesh",
+      "Jammu & Kashmir",
+    ],
+  },
 };

@@ -189,14 +189,17 @@ Please contact me.`;
           >
             {/* Name */}
             <div className="relative">
+              <label htmlFor="booking-name" className="sr-only">Full Name</label>
               <User
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
               />
               <input
                 type="text"
+                id="booking-name"
                 name="name"
                 placeholder="Full Name"
+                aria-label="Full Name"
                 value={form.name}
                 onChange={handleChange}
                 className={inputClass("name")}
@@ -208,14 +211,17 @@ Please contact me.`;
 
             {/* Mobile */}
             <div className="relative">
+              <label htmlFor="booking-mobile" className="sr-only">Mobile Number</label>
               <Phone
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
               />
               <input
                 type="tel"
+                id="booking-mobile"
                 name="mobile"
                 placeholder="Mobile Number"
+                aria-label="Mobile Number"
                 value={form.mobile}
                 onChange={handleChange}
                 className={inputClass("mobile")}
@@ -231,14 +237,17 @@ Please contact me.`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {/* Pickup Location */}
               <div className="relative" ref={pickupRef}>
+                <label htmlFor="booking-pickup" className="sr-only">Pickup Location</label>
                 <MapPin
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60 z-10"
                 />
                 <input
                   type="text"
+                  id="booking-pickup"
                   name="pickup"
                   placeholder="Pickup Location"
+                  aria-label="Pickup Location"
                   value={form.pickup}
                   onChange={(e) => handleLocationChange(e, "pickup")}
                   onFocus={() => handleLocationFocus("pickup")}
@@ -251,7 +260,7 @@ Please contact me.`;
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-30 divide-y divide-gold-border/10"
+                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-50 divide-y divide-gold-border/10"
                     >
                       {suggestions.map((loc) => (
                         <button
@@ -276,14 +285,17 @@ Please contact me.`;
 
               {/* Destination */}
               <div className="relative" ref={destRef}>
+                <label htmlFor="booking-destination" className="sr-only">Destination</label>
                 <Navigation
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60 z-10"
                 />
                 <input
                   type="text"
+                  id="booking-destination"
                   name="destination"
                   placeholder="Destination"
+                  aria-label="Destination"
                   value={form.destination}
                   onChange={(e) => handleLocationChange(e, "destination")}
                   onFocus={() => handleLocationFocus("destination")}
@@ -296,7 +308,7 @@ Please contact me.`;
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-30 divide-y divide-gold-border/10"
+                      className="absolute left-0 right-0 mt-2 bg-[#0c0d12]/95 border border-gold-border rounded-xl shadow-2xl shadow-black/80 max-h-60 overflow-y-auto backdrop-blur-md z-50 divide-y divide-gold-border/10"
                     >
                       {suggestions.map((loc) => (
                         <button
@@ -324,13 +336,17 @@ Please contact me.`;
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {/* Date */}
               <div className="relative">
+                <label htmlFor="booking-date" className="sr-only">Travel Date</label>
                 <Calendar
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
                 />
                 <input
                   type="date"
+                  id="booking-date"
                   name="date"
+                  aria-label="Travel Date"
+                  min={new Date().toISOString().split('T')[0]}
                   value={form.date}
                   onChange={handleChange}
                   onFocus={(e) => {
@@ -354,15 +370,18 @@ Please contact me.`;
 
               {/* Days */}
               <div className="relative">
+                <label htmlFor="booking-days" className="sr-only">Number of Days</label>
                 <CalendarRange
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
                 />
                 <input
                   type="number"
+                  id="booking-days"
                   name="days"
                   min="1"
                   placeholder="Number of Days"
+                  aria-label="Number of Days"
                   value={form.days}
                   onChange={handleChange}
                   className={inputClass("days")}
@@ -376,15 +395,18 @@ Please contact me.`;
 
               {/* Vehicle */}
               <div className="relative">
+                <label htmlFor="booking-vehicle" className="sr-only">Vehicle Type</label>
                 <Car
                   size={18}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/60"
                 />
                 <select
+                  id="booking-vehicle"
                   name="vehicle"
+                  aria-label="Vehicle Type"
                   value={form.vehicle}
                   onChange={handleChange}
-                  className={`${inputClass("vehicle")} appearance-none cursor-pointer ${!form.vehicle ? "text-muted/50" : ""}`}
+                  className={`${inputClass("vehicle")} appearance-none cursor-pointer ${!form.vehicle ? "text-muted/70" : ""}`}
                 >
                   <option value="" disabled>
                     Select Vehicle

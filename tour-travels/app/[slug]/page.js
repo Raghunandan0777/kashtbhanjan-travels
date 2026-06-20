@@ -47,20 +47,20 @@ export async function generateMetadata({ params }) {
       siteName: "Shree Kashtbhanjan Travels",
       images: [
         {
-          url: "https://www.shree-kashtbhanjan-travels.in/images/hero_background.png",
+          url: "https://www.shree-kashtbhanjan-travels.in/images/hero_background.webp",
           width: 1200,
           height: 630,
           alt: "Shree Kashtbhanjan Travels Fleet"
         }
       ],
       locale: "en_IN",
-      type: "website",
+      type: "product",
     },
     twitter: {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: ["https://www.shree-kashtbhanjan-travels.in/images/hero_background.png"],
+      images: ["https://www.shree-kashtbhanjan-travels.in/images/hero_background.webp"],
     },
   };
 }

@@ -60,7 +60,7 @@ export default function Navbar() {
           <a href={pathname === "/" ? "#home" : "/"} className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 overflow-hidden rounded-full border border-gold-border group-hover:scale-110 transition-transform duration-300">
               <Image
-                src="/Tlogo.png"
+                src="/logo.webp"
                 alt="Shree Kashtbhanjan Travels Logo"
                 fill
                 className="object-cover animate-pulse-subtle"
@@ -118,7 +118,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed inset-0 top-16 z-30 glass-strong flex flex-col items-center justify-center gap-6 lg:hidden"
+            className="fixed inset-0 top-[72px] z-30 glass-strong flex flex-col items-center justify-center gap-6 lg:hidden"
           >
             {NAV_LINKS.map((link, i) => (
               <motion.a

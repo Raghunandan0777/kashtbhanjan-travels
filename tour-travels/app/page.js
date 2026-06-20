@@ -33,7 +33,7 @@ export const metadata = {
     siteName: "Shree Kashtbhanjan Travels",
     images: [
       {
-        url: `${SITE_URL}/images/hero_background.png`,
+        url: `${SITE_URL}/images/hero_background.webp`,
         width: 1200,
         height: 630,
         alt: "Shree Kashtbhanjan Travels Fleet"
@@ -46,7 +46,7 @@ export const metadata = {
     card: "summary_large_image",
     title: SEO_DATA.home.title,
     description: SEO_DATA.home.description,
-    images: [`${SITE_URL}/images/hero_background.png`],
+    images: [`${SITE_URL}/images/hero_background.webp`],
   },
 };
 
@@ -66,7 +66,6 @@ export default function Home() {
       <Navbar />
       <main className="relative z-20">
         <Hero 
-          title={homeData.title}
           subtitle={homeData.heroSubheading}
         />
         <div className="section-divider" />

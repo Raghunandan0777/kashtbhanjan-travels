@@ -4,10 +4,10 @@ export const BASE_URL = "https://www.shree-kashtbhanjan-travels.in";
 export const SEO_DATA = {
   home: {
     slug: "",
-    title: "Shree Kashtbhanjan Travels – Taxi & Cab Service in Surat",
+    title: "Shree Kashtbhanjan Travels – Service in Surat",
     description: "Book 24/7 premium taxi service in Surat. Reliable local cabs, airport transfers, outstation taxis & tempo traveller rentals at best rates. Book on WhatsApp!",
     keywords: "Shree Kashtbhanjan Travels, Kashtbhanjan Travels, Taxi Service Surat, Cab Service Surat, Airport Taxi Surat, Outstation Taxi Surat, Tempo Traveller Surat, Gujarat Taxi Service, taxi service in Surat, cab booking Surat",
-    canonical: `${BASE_URL}/`,
+    canonical: `${BASE_URL}`,
     heroBadge: "Premium Travel Services",
     heroHeading: "Travel in Comfort. Arrive in Style.",
     heroSubheading: "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.",
@@ -56,7 +56,7 @@ export const SEO_DATA = {
       }
     ],
     seoText: `
-      <h2>Shree Kashtbhanjan Travels: Premium Taxi & Cab Service in Surat</h2>
+      <h2>Shree Kashtbhanjan Travels: Premium Service in Surat</h2>
       <p>Welcome to <strong>Shree Kashtbhanjan Travels</strong>, your premier destination for reliable, comfortable, and luxury transportation services. Based in the heart of Surat, Gujarat, we specialize in offering a diverse range of travel solutions tailored to meet the needs of modern commuters, tourists, corporate clients, and groups. Whether you need a quick city ride, an early morning airport transfer, or a long-distance outstation tour, we stand ready to serve you 24 hours a day, 7 days a week.</p>
       <p>As a leading <strong>taxi service in Surat</strong>, we pride ourselves on maintaining a pristine, meticulously cleaned fleet of vehicles and employing certified, background-verified professional drivers. Our commitment to excellence, transparent pricing, and punctual service has made us the go-to choice for thousands of satisfied travelers seeking high-quality <strong>cab service in Surat</strong>.</p>
       
