@@ -21,7 +21,7 @@ export const SEO_DATA = {
       },
       {
         question: "What types of vehicles are available in your fleet?",
-        answer: "Our modern fleet includes compact premium sedans (Swift Dzire), spacious multi-utility vehicles (Maruti Ertiga, Kia Carens), luxury MPVs (Toyota Innova Crysta), and large group vehicles like Tempo Travellers (12+ seats)."
+        answer: "Our modern fleet includes compact premium sedans (Swift Dzire), spacious multi-utility vehicles (Maruti Ertiga, Kia Carens), luxury MPVs (Toyota Innova Crysta), and large group vehicles like Tempo Travellers (12+ seats) and premium Force Urbania luxury vans."
       },
       {
         question: "Do you offer services 24/7?",
@@ -63,7 +63,7 @@ export const SEO_DATA = {
       <h3>Why Choose Shree Kashtbhanjan Travels?</h3>
       <p>Navigating the bustling streets of Surat or embarking on long highway journeys requires trust and reliability. Here is why we are preferred by travelers across Gujarat:</p>
       <ul>
-        <li><strong>Diverse Fleet Selection:</strong> From budget-friendly premium sedans like Swift Dzire to spacious family SUVs like Maruti Ertiga and Kia Carens, luxury MPVs like Toyota Innova Crysta, and large group vehicles like <strong>Tempo Traveller Surat</strong>, we have the perfect ride for every occasion.</li>
+        <li><strong>Diverse Fleet Selection:</strong> From budget-friendly premium sedans like Swift Dzire to spacious family SUVs like Maruti Ertiga and Kia Carens, luxury MPVs like Toyota Innova Crysta, to large group vehicles like <strong>Tempo Traveller Surat</strong> and the ultra-luxury <strong>Force Urbania</strong>, we have the perfect ride for every occasion.</li>
         <li><strong>24/7 Availability:</strong> Travel does not conform to regular office hours. Our booking and driving teams operate round the clock, ensuring you always have access to a safe ride, even for late-night or early-morning flights.</li>
         <li><strong>Professional Chauffeurs:</strong> Our drivers are seasoned highway experts, well-trained in passenger safety, route navigation, and courteous behavior. They ensure your journey is safe, quiet, and stress-free.</li>
         <li><strong>Transparent, Zero-Hidden-Cost Pricing:</strong> We believe in honest billing. The price quoted is the price you pay. We offer fully transparent breakdowns including driver allowances, tolls, and state border permits.</li>

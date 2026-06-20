@@ -13,7 +13,7 @@ const FLEET = [
     passengers: "4 Passengers",
     ac: "AC",
     luggage: "2 Bags",
-    perKm: "₹11/km",
+    perKm: "₹13/km",
     desc: "Compact luxury sedan — perfect for city rides and short trips.",
   },
   {
@@ -51,6 +51,15 @@ const FLEET = [
     luggage: "8+ Bags",
     perKm: "₹22/km",
     desc: "Group travel specialist — perfect for tours and large parties.",
+  },
+  {
+    name: "Force Urbania",
+    image: "/images/force_urbania.png",
+    passengers: "10-17 Passengers",
+    ac: "AC",
+    luggage: "8+ Bags",
+    perKm: "₹25/km",
+    desc: "Ultra-luxury premium van — ideal for executive group tours and premium family travel.",
   },
 ];
 

@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
 import { SITE_URL, BUSINESS } from "@/lib/site-config";
+import FloatingActions from "@/components/FloatingActions";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {children}
+        <FloatingActions />
       </body>
     </html>
   );

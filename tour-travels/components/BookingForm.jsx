@@ -9,6 +9,7 @@ const VEHICLE_OPTIONS = [
   "Innova Crysta",
   "Ertiga",
   "Tempo Traveller",
+  "Force Urbania",
   "Luxury Car",
 ];
 
