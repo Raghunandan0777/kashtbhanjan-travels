@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import { SITE_URL, BUSINESS } from "@/lib/site-config";
 import FloatingActions from "@/components/FloatingActions";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -104,6 +105,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(taxiServiceJsonLd),
           }}
         />
+        <LoadingScreen />
         {children}
         <FloatingActions />
       </body>

@@ -1,34 +1,98 @@
 "use client";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
-export default function Hero({ badge, title, subtitle }) {
-  const displayBadge = badge || "Premium Travel Services";
+const HERO_SLIDES = [
+  {
+    image: "/images/hero_background.webp",
+    badge: "Premium Travel Services",
+    quote: "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.",
+    alt: "Luxury cars fleet of Shree Kashtbhanjan Travels"
+  },
+  {
+    image: "/images/goa_hero.png",
+    badge: "Goa Tour Packages",
+    quote: "“Jobs fill your pocket, but adventures fill your soul.” Let's explore the sun-kissed beaches and scenic coasts of Goa.",
+    alt: "Beautiful palm-fringed beach of Goa"
+  },
+  {
+    image: "/images/kashmir_hero.png",
+    badge: "Kashmir Tour Packages",
+    quote: "“If there is heaven on earth, it is here, it is here, it is here.” Experience snow-capped valleys and beautiful lakes of Kashmir.",
+    alt: "Dal Lake and shikaras in Kashmir"
+  },
+  {
+    image: "/images/rajasthan_hero.png",
+    badge: "Rajasthan Tour Packages",
+    quote: "“Explore the land of kings, palaces, and golden deserts.” Discover majestic royal forts and heritage routes of Rajasthan.",
+    alt: "Beautiful royal palaces in Rajasthan"
+  },
+  {
+    image: "/images/himachal_hero.png",
+    badge: "Himachal Tour Packages",
+    quote: "“The mountains are calling and I must go.” Unwind in scenic green valleys and snowy peaks of Manali.",
+    alt: "Snowy pine trees and mountain vistas of Himachal"
+  },
+  {
+    image: "/images/gujarat_hero.png",
+    badge: "Gujarat Tour Packages",
+    quote: "“Colors, culture, and timeless heritage.” Tour the majestic temples, historic stepwells, and white sands of Gujarat.",
+    alt: "Beautiful heritage temples of Gujarat"
+  }
+];
+
+export default function Hero({ badge, title, subtitle, bgImage, enableSlideshow = false }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (!enableSlideshow) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 6500);
+
+    return () => clearInterval(interval);
+  }, [enableSlideshow]);
+
+  const activeBadge = enableSlideshow ? HERO_SLIDES[currentSlide].badge : (badge || "Premium Travel Services");
+  const activeSubtitle = enableSlideshow ? HERO_SLIDES[currentSlide].quote : (subtitle || "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.");
+  const activeImage = enableSlideshow ? HERO_SLIDES[currentSlide].image : (bgImage || "/images/hero_background.webp");
+
   const displayTitle = title || (
     <>
-      Travel in Comfort.{" "}
-      <span className="gold-gradient-text">Arrive in Style. <span className="">With Shree Kashtbhanjan Travels</span></span> 
+      <span className="gold-gradient-text"> Shree Kashtbhanjan Travels</span>
     </>
   );
-  const displaySubtitle = subtitle || "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.";
 
   return (
     <section
       id="home"
       className="relative min-h-screen pt-20 sm:pt-24 md:pt-20 flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 top-0">
-        <Image
-          src="/images/hero_background.webp"
-          alt="Luxury car on highway"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={90}
-        />
-        <div className="hero-overlay absolute inset-0" />
+      {/* Background Image Slideshow */}
+      <div className="absolute inset-0 top-0 overflow-hidden">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={activeImage}
+              alt={enableSlideshow ? HERO_SLIDES[currentSlide].alt : "Premium travel fleet"}
+              fill
+              className="object-cover object-center scale-105"
+              priority
+              quality={85}
+            />
+          </motion.div>
+        </AnimatePresence>
+        <div className="hero-overlay absolute inset-0 z-10" />
       </div>
 
       {/* Animated Gold Particles */}
@@ -60,17 +124,21 @@ export default function Hero({ badge, title, subtitle }) {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">
-            {displayBadge}
-          </span>
-        </motion.div>
+        <div className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8 h-10 overflow-hidden">
+          <span className="w-2 h-2 rounded-full bg-gold animate-pulse flex-shrink-0" />
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={currentSlide}
+              initial={{ y: 15, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -15, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase block"
+            >
+              {activeBadge}
+            </motion.span>
+          </AnimatePresence>
+        </div>
 
         {/* Headline */}
         <motion.h1
@@ -82,15 +150,21 @@ export default function Hero({ badge, title, subtitle }) {
           {displayTitle}
         </motion.h1>
 
-        {/* Subheadline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="text-muted text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
-        >
-          {displaySubtitle}
-        </motion.p>
+        {/* Subheadline / Quotes */}
+        <div className="min-h-[80px] sm:min-h-[60px] md:min-h-[56px] flex items-center justify-center mb-10">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={currentSlide}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="text-muted text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            >
+              {activeSubtitle}
+            </motion.p>
+          </AnimatePresence>
+        </div>
         <span className="text-gold text-xs sm:text-sm font-medium tracking-widest uppercase">Daily Pickup and Drop Service at Mumbai, Surat, Ahmedabad Airports</span>
 
 

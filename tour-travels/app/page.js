@@ -67,6 +67,7 @@ export default function Home() {
       <main className="relative z-20">
         <Hero 
           subtitle={homeData.heroSubheading}
+          enableSlideshow={true}
         />
         <div className="section-divider" />
         <BookingForm />
