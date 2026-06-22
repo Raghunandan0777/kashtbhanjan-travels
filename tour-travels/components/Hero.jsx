@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HERO_SLIDES = [
   {
-    image: "/images/hero_background.webp",
+    image: "/images/fleet_hero.png",
     badge: "Premium Travel Services",
     quote: "Premium taxi, airport transfer, corporate travel, and tour services available 24/7. Experience luxury at every mile.",
     alt: "Luxury cars fleet of Shree Kashtbhanjan Travels"
